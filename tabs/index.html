@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标签页组件</title>
+    <link rel = "stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id = "app" v-cloak>
+        <tabs v-model="activeKey">
+            <pane label="詹姆斯" name="1">
+                勒布朗·詹姆斯（LeBron James），1984年12月30日出生在美国俄亥俄州阿克伦，美国职业篮球运动员，司职小前锋，绰号“小皇帝”，效力于NBA洛杉矶湖人队。
+            </pane>
+            <pane label="韦德" name="2">
+                德怀恩·韦德（Dwyane Wade），1982年1月17日出生于美国伊利诺伊州芝加哥，美国职业篮球运动员，司职得分后卫，效力于NBA迈阿密热火队，绰号“闪电侠”（The Flash）。
+            </pane>
+            <pane label="保罗" name="3">
+                克里斯·保罗（Chris Paul），1985年5月6日出生于美国北卡罗来纳州温斯顿-塞勒姆（Winston-Salem，North Carolina），美国职业篮球运动员，司职控球后卫，效力于NBA休斯顿火箭队。
+            </pane>
+        </tabs>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="pane.js"></script>
+    <script src="tabs.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                activeKey: '1'
+            }
+        })
+    </script>
+</body>
+</html>
